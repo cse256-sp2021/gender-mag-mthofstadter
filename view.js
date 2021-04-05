@@ -1,11 +1,11 @@
 // ---- Define your dialogs  and panels here ----
-let panel = define_new_effective_permissions("e_p", true);
+/*let panel = define_new_effective_permissions("e_p", true);
 let userSelector = define_new_user_select_field("e_p", "Select User", function(selected_user){
     $('#e_p').attr('username', selected_user);
     $('#e_p').attr('filepath', '/C');
 });
 $('#sidepanel').append(userSelector);
-$('#sidepanel').append(panel);
+$('#sidepanel').append(panel);*/
 
 let dialog = define_new_dialog("dialogBox", "Dialog Info");
 $('.perm_info').click(function(){
@@ -34,7 +34,7 @@ function make_file_element(file_obj) {
             <h3 id="${file_hash}_header">
                 <span class="oi oi-folder" id="${file_hash}_icon"/> ${file_obj.filename} 
                 <button class="ui-button ui-widget ui-corner-all permbutton" path="${file_hash}" id="${file_hash}_permbutton"> 
-                    <span class="oi oi-lock-unlocked" id="${file_hash}_permicon"/> 
+                    <span class="oi oi-lock-locked" id="${file_hash}_permicon"/> 
                 </button>
             </h3>
         </div>`)
@@ -54,7 +54,7 @@ function make_file_element(file_obj) {
         return $(`<div class='file'  id="${file_hash}_div">
             <span class="oi oi-file" id="${file_hash}_icon"/> ${file_obj.filename}
             <button class="ui-button ui-widget ui-corner-all permbutton" path="${file_hash}" id="${file_hash}_permbutton"> 
-                <span class="oi oi-lock-unlocked" id="${file_hash}_permicon"/> 
+                <span class="oi oi-lock-locked" id="${file_hash}_permicon"/> 
             </button>
         </div>`)
     }
@@ -93,3 +93,5 @@ $('.permbutton').click( function( e ) {
 
 // ---- Assign unique ids to everything that doesn't have an ID ----
 $('#html-loc').find('*').uniqueId() 
+
+$('.permbutton').append(' Edit Permissions');

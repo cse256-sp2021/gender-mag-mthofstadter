@@ -111,7 +111,7 @@
                                     id="adv_permissions_tab_elem">Permissions</a></li>
                             <li id="advtab_title_owner"><a href="#adv_owner_tab" id="adv_owner_tab_elem">Owner</a></li>
                             <li id="advtab_title_effective"><a href="#adv_effective_tab"
-                                    id="adv_effective_tab_elem">Effective Permissions</a></li>
+                                    id="adv_effective_tab_elem">Specific Permissions</a></li>
                         </ul>
                         <div id="adv_permissions_tab">
                             <div id="adv_perm_object_name" class="section">Object Name: <span
@@ -156,14 +156,14 @@
                         <div id="adv_effective_tab">
                             <div id="adv_effective_object_name" class="section">Object Name: <span
                                     id="adv_effective_filepath"></span></div>
-                            <div id="adv_effective_user_text">Group or user name:</div>
+                            <div id="adv_effective_user_text">Select group or user name to view which specific permssions are enabled</div>
                             <div id="adv_effective_current_user_line" class="section">
                                 <span id="adv_effective_current_user" class="ui-widget-content"
                                     style="width: 80%;display: inline-block;">&nbsp</span>
                                 <button id="adv_effective_user_select"
                                     class="ui-button ui-widget ui-corner-all">Select...</button>
                             </div>
-                            <div id="adv_effective_effective_text">Effective permissions:</div>
+                            <div id="adv_effective_effective_text">Specific permissions:</div>
                             <div id="adv_effective_effective_list" class="ui-widget-content"
                                 style="height:150px;overflow-y:scroll"></div>
                         </div>
@@ -207,6 +207,9 @@
                 <script src="view_baseline.js"></script>
                 <script src="view.js"></script>
             </div>
+        </div>
+        <div>
+            <button id="help_button" class="ui-button ui-widget ui-corner-all">Help</button>
         </div>
     </div>
     <script id="log_model_script" src="core/entry_model.js">
