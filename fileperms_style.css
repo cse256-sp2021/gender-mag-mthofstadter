@@ -72,3 +72,13 @@
     height: 50px;
     font-size: 24px;
 }
+
+/*Here I made the advanced tabs hidden!*/
+
+#advtab_title_owner  {
+    visibility: hidden;
+}
+
+#advtab_title_effective {
+    visibility: hidden;
+}
