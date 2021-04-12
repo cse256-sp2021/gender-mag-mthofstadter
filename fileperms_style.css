@@ -40,8 +40,35 @@
 #permissions_user_button_title {
     margin-top: 10px;
     font-weight: bold;
+    color: orange;
 }
 
 #permdialog {
     width: 50%;
+}
+
+#permissions_user_title {
+    font-weight: bold;
+    color: orange;
+}
+
+#permdialog_objname {
+    font-weight: bold;
+    color: orange;
+}
+
+#permdialog_objname_namespan {
+    font-weight: normal;
+    color: black;
+}
+
+#permdialog_grouped_permissions_header_p span {
+    color: red;
+}
+
+#help_button {
+    color: orange;
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
 }

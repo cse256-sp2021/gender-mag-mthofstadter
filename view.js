@@ -23,6 +23,7 @@ $('.perm_info').click(function(){
 })
 
 
+
 // ---- Display file structure ----
 
 // (recursively) makes and returns an html element (wrapped in a jquery object) for a given file object
@@ -95,3 +96,11 @@ $('.permbutton').click( function( e ) {
 $('#html-loc').find('*').uniqueId() 
 
 $('.permbutton').append(' Edit Permissions');
+
+function tips() {
+    console.log("tips...");
+    let helpDialog = define_new_dialog("helpDialogBox", "Helpful Tips");
+    $( "#helpDialogBox" ).dialog('open');
+    $( "#helpDialogBox" ).text("Is a specific file not behaving like the other ones? Try going to the ADVANCED permissions of the folder of the file and clicking the checkbox 'Reset the permissions...'");
+}
+
