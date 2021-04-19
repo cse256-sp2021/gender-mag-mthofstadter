@@ -41,6 +41,7 @@ grouped_permissions.addClass('section') // add a 'section' class to the grouped_
 // Make the list of users (empty for now - will get populated when we know the file):
 file_permission_users = define_single_select_list('permdialog_file_user_list', function(selected_user, e, ui){
     // when a new user is selected, change username attribute of grouped permissions:
+    document.getElementById("overlay").classList.add("hideOverlay");
     grouped_permissions.attr('username', selected_user)
 })
 file_permission_users.css({
@@ -151,6 +152,7 @@ perm_dialog.append($('<div id="permissions_user_button_title">Add or Remove a us
 perm_dialog.append(perm_add_user_select)
 perm_add_user_select.append(perm_remove_user_button) // Cheating a bit again - add the remove button the the 'add user select' div, just so it shows up on the same line.
 perm_dialog.append($('<div id="permissions_user_help_text">Note: if checkmarks are gray the permissions are inherited. Go to ADVANCED to change these.</div>'))
+perm_dialog.append($('<div id="overlay">Please Select a User</div>'))
 perm_dialog.append(grouped_permissions)
 perm_dialog.append(advanced_expl_div)
 
@@ -536,6 +538,7 @@ for(let p of Object.values(permissions)){
 $('#adv_perm_edit').click(function(){
     let filepath = $('#advdialog').attr('filepath')
     open_permission_entry(filepath)
+    document.getElementById("overlayAdvanced").classList.remove("hideOverlayAdvanced");
 })
 
 $('#perm_entry_change_user').click(function(){
@@ -547,6 +550,8 @@ perm_entry_user_observer = new MutationObserver(function(mutationsList, observer
     for(let mutation of mutationsList) {
         if(mutation.type === 'attributes') {
             if(mutation.attributeName === 'selected_user') {
+                console.log("A User was selected*****");
+                document.getElementById("overlayAdvanced").classList.add("hideOverlayAdvanced");
 
                 let filepath = $('#advdialog').attr('filepath') // TODO: maybe set and use own filepath in this dialog.
                 let file_obj = path_to_file[filepath]

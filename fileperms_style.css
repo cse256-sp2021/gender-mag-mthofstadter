@@ -54,7 +54,6 @@
 
 #permdialog_objname {
     font-weight: bold;
-    color: orange;
 }
 
 #permdialog_objname_namespan {
@@ -82,3 +81,48 @@
 #advtab_title_effective {
     visibility: hidden;
 }
+
+#adv_perm_entries_text {
+    display: none;
+}
+#adv_perm_table_container {
+    display: none;
+}
+
+#overlay.hideOverlay {
+    display: none;
+}
+
+#overlay {
+    width: 92.5%;
+    height: 120px;
+    background-color: rgba(150,150,150,0.5);
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    padding-top: 30px;
+}
+
+#perm_entry_change_user {
+    color: #007fff;
+}
+
+#overlayAdvanced {
+    width: 92.5%;
+    height: 250px;
+    background-color: rgba(150,150,150,0.9);
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    padding-top: 30px;
+}
+
+#overlayAdvanced.hideOverlayAdvanced {
+    display: none;
+}
+
+

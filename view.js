@@ -35,7 +35,7 @@ function make_file_element(file_obj) {
             <h3 id="${file_hash}_header">
                 <span class="oi oi-folder" id="${file_hash}_icon"/> ${file_obj.filename} 
                 <button class="ui-button ui-widget ui-corner-all permbutton" path="${file_hash}" id="${file_hash}_permbutton"> 
-                    <span class="oi oi-lock-locked" id="${file_hash}_permicon"/> 
+                    <span class="oi oi-pencil" id="${file_hash}_permicon"/> 
                 </button>
             </h3>
         </div>`)
@@ -55,7 +55,7 @@ function make_file_element(file_obj) {
         return $(`<div class='file'  id="${file_hash}_div">
             <span class="oi oi-file" id="${file_hash}_icon"/> ${file_obj.filename}
             <button class="ui-button ui-widget ui-corner-all permbutton" path="${file_hash}" id="${file_hash}_permbutton"> 
-                <span class="oi oi-lock-locked" id="${file_hash}_permicon"/> 
+                <span class="oi oi-pencil" id="${file_hash}_permicon"/> 
             </button>
         </div>`)
     }
@@ -84,6 +84,8 @@ $('.permbutton').click( function( e ) {
     perm_dialog.attr('filepath', path)
     perm_dialog.dialog('open')
     //open_permissions_dialog(path)
+    document.getElementById("overlay").classList.remove("hideOverlay");
+
 
     // Deal with the fact that folders try to collapse/expand when you click on their permissions button:
     e.stopPropagation() // don't propagate button click to element underneath it (e.g. folder accordion)
