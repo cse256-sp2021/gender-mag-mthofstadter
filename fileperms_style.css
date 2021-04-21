@@ -62,7 +62,7 @@
 }
 
 #permdialog_grouped_permissions_header_p span {
-    color: red;
+    color: orange;
 }
 
 #help_button {
@@ -112,7 +112,7 @@
 #overlayAdvanced {
     width: 92.5%;
     height: 250px;
-    background-color: rgba(150,150,150,0.9);
+    background-color: rgba(150,150,150,0.5);
     position: absolute;
     z-index: 5;
     text-align: center;
@@ -123,6 +123,14 @@
 
 #overlayAdvanced.hideOverlayAdvanced {
     display: none;
+}
+
+#permdialog_advanced_explantion_text {
+    color: #007fff;
+}
+
+#permdialog_grouped_permissions_header_deny, #perm_entry_header_deny {
+    color: red;
 }
 
 
