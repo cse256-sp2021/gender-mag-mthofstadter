@@ -1,26 +1,26 @@
 // ---- Define your dialogs  and panels here ----
-/*let panel = define_new_effective_permissions("e_p", true);
-let userSelector = define_new_user_select_field("e_p", "Select User", function(selected_user){
-    $('#e_p').attr('username', selected_user);
-    $('#e_p').attr('filepath', '/C');
-});
-$('#sidepanel').append(userSelector);
-$('#sidepanel').append(panel);*/
+// let panel = define_new_effective_permissions("e_p", true);
+// let userSelector = define_new_user_select_field("e_p", "Select User", function(selected_user){
+//     $('#e_p').attr('username', selected_user);
+//     $('#e_p').attr('filepath', '/C');
+// });
+// $('#sidepanel').append(userSelector);
+// $('#sidepanel').append(panel);
 
-let dialog = define_new_dialog("dialogBox", "Dialog Info");
-$('.perm_info').click(function(){
-    $( "#dialogBox" ).dialog('open');
-    console.log($("#e_p").attr('filepath'));
-    console.log($("#e_p").attr('username'));
-    console.log($(this).attr('permission_name'));
-    let myFileObject = path_to_file[$("#e_p").attr('filepath')];
-    let myUsernameObject = all_users[$("#e_p").attr('username')];
-    let permissionCheck = $(this).attr('permission_name');
-    let explanation = allow_user_action(myFileObject, myUsernameObject, permissionCheck, true);
-    let readableExplanation = get_explanation_text(explanation);
-    $( "#dialogBox" ).text(readableExplanation);
+// let dialog = define_new_dialog("dialogBox", "Dialog Info");
+// $('.perm_info').click(function(){
+//     $( "#dialogBox" ).dialog('open');
+//     console.log($("#e_p").attr('filepath'));
+//     console.log($("#e_p").attr('username'));
+//     console.log($(this).attr('permission_name'));
+//     let myFileObject = path_to_file[$("#e_p").attr('filepath')];
+//     let myUsernameObject = all_users[$("#e_p").attr('username')];
+//     let permissionCheck = $(this).attr('permission_name');
+//     let explanation = allow_user_action(myFileObject, myUsernameObject, permissionCheck, true);
+//     let readableExplanation = get_explanation_text(explanation);
+//     $( "#dialogBox" ).text(readableExplanation);
 
-})
+// })
 
 
 

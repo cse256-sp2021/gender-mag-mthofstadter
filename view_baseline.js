@@ -541,16 +541,27 @@ $('#adv_perm_edit').click(function(){
     document.getElementById("overlayAdvanced").classList.remove("hideOverlayAdvanced");
 })
 
+
 $('#perm_entry_change_user').click(function(){
     open_user_select('perm_entry_username') 
 })
 
+function showCurrentPermissions() {
+let panel = define_new_effective_permissions("e_p", true);
+let userSelector = define_new_user_select_field("e_p", "Select User", function(selected_user){
+    $('#e_p').attr('username', selected_user);
+    $('#e_p').attr('filepath', '/C');
+});
+$('#sidepanel').append(userSelector);
+$('#sidepanel').append(panel);
+}
 
 perm_entry_user_observer = new MutationObserver(function(mutationsList, observer){
     for(let mutation of mutationsList) {
         if(mutation.type === 'attributes') {
             if(mutation.attributeName === 'selected_user') {
                 console.log("A User was selected*****");
+                showCurrentPermissions();
                 document.getElementById("overlayAdvanced").classList.add("hideOverlayAdvanced");
 
                 let filepath = $('#advdialog').attr('filepath') // TODO: maybe set and use own filepath in this dialog.

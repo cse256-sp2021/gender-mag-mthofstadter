@@ -103,6 +103,7 @@
     font-size: 24px;
     color: white;
     padding-top: 30px;
+    text-shadow: 0px 0px 10px black;
 }
 
 #perm_entry_change_user {
@@ -118,8 +119,10 @@
     text-align: center;
     font-size: 24px;
     color: white;
+    text-shadow: 0px 0px 10px black;
     padding-top: 30px;
 }
+
 
 #overlayAdvanced.hideOverlayAdvanced {
     display: none;
