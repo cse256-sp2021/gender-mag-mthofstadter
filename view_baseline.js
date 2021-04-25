@@ -561,7 +561,7 @@ perm_entry_user_observer = new MutationObserver(function(mutationsList, observer
         if(mutation.type === 'attributes') {
             if(mutation.attributeName === 'selected_user') {
                 console.log("A User was selected*****");
-                showCurrentPermissions();
+                // showCurrentPermissions();
                 document.getElementById("overlayAdvanced").classList.add("hideOverlayAdvanced");
 
                 let filepath = $('#advdialog').attr('filepath') // TODO: maybe set and use own filepath in this dialog.
