@@ -117,7 +117,7 @@ let are_you_sure_dialog = define_new_dialog('are_you_sure_dialog', "Are you sure
     }
 })
 // Add text to the dialog:
-are_you_sure_dialog.text('Do you want to remove permissions for this user?')
+are_you_sure_dialog.text('Do you want to remove ALL permissions and access from this user?')
 
 // Make actual "remove" button:
 perm_remove_user_button  = $('<button id="perm_remove_user" class="ui-button ui-widget ui-corner-all">Remove</button>')
