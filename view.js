@@ -22,7 +22,10 @@
 
 // })
 
-
+$('#sidepanel').append("<div id='tips'></div>");
+$('#tips').append('<h2>Helpful Tips</h2>');
+$('#tips').append("<p class='tip_q'>Is one file not behaving like the other ones in the folder?</p><p class='hint_a'>Try going to the advanced permissions for THE FOLDER and clicking &ldquo;Reset the permissions...&rdquo;");
+$('#tips').append("<p class='tip_q'>Do you want to disable a specific permission for a folder like delete?</p><p class='hint_a'>Try going to the advanced permissions for that folder &gt; Edit more permission &gt; and check the DENY boxes for the desired permissions.")
 
 // ---- Display file structure ----
 

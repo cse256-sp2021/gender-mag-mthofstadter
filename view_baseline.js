@@ -547,13 +547,13 @@ $('#perm_entry_change_user').click(function(){
 })
 
 function showCurrentPermissions() {
-let panel = define_new_effective_permissions("e_p", true);
-let userSelector = define_new_user_select_field("e_p", "Select User", function(selected_user){
-    $('#e_p').attr('username', selected_user);
-    $('#e_p').attr('filepath', '/C');
-});
-$('#sidepanel').append(userSelector);
-$('#sidepanel').append(panel);
+    let panel = define_new_effective_permissions("e_p", true);
+    let userSelector = define_new_user_select_field("e_p", "Select User", function(selected_user){
+        $('#e_p').attr('username', selected_user);
+        $('#e_p').attr('filepath', '/C');
+    });
+    $('#sidepanel').append(userSelector);
+    $('#sidepanel').append(panel);
 }
 
 perm_entry_user_observer = new MutationObserver(function(mutationsList, observer){
